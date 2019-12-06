@@ -28,6 +28,7 @@ This was a fun project to make, and it's hard to stop adding little improvements
 #include <string>
 #include <iomanip>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
@@ -103,7 +104,7 @@ int main()
     // note: see askRerun function
     bool again = false;
 
-    cout << T_GRN << "Welcome to Nomina 9.0 (new and actually working!)" << T_RESET << endl;
+    cout << T_GRN << "Welcome to Nomina 8.0 (new and much improved!)" << T_RESET << endl;
 
     do
     {
@@ -450,7 +451,7 @@ int askEmployeesToFilter(const vector<Employee> &querySet)
         {
             if (!s.empty())
             {
-                newSize = stoi(s);
+                newSize = atoi(s.c_str());
             }
             else
             {
@@ -549,14 +550,14 @@ int displayMenuOptions()
         cout << T_YEL << "Pick an item: " << T_RESET;
         getline(cin, selection);
 
-        // STOI can fail so we use try catch to get any exceptions.
+        // atoi can fail so we use try catch to get any exceptions.
         // This seems like overkill, but it allows hitting enter to do a default value.
         // see askEmployeesToFilter comments
         try
         {
             if (!selection.empty())
             {
-                value = stoi(selection);
+                value = atoi(selection.c_str());
                 valid = true;
             }
         }
