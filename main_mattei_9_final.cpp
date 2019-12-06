@@ -103,7 +103,7 @@ int main()
     // note: see askRerun function
     bool again = false;
 
-    cout << T_GRN << "Welcome to Nomina 8.0 (new and much improved!)" << T_RESET << endl;
+    cout << T_GRN << "Welcome to Nomina 9.0 (new and actually working!)" << T_RESET << endl;
 
     do
     {
