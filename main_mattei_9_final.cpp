@@ -86,8 +86,8 @@ void printTableHeading(ofstream &);
 void printTotal(double);
 void printTotal(double, ofstream &);
 
-void printRow(Employee e);
-void printRow(Employee e, ofstream &);
+void printTableRow(Employee);
+void printTableRow(Employee, ofstream &);
 
 void printAllRows(vector<Employee> &, ofstream &);
 
@@ -104,7 +104,7 @@ int main()
     // note: see askRerun function
     bool again = false;
 
-    cout << T_GRN << "Welcome to Nomina 8.0 (new and actually working!)" << T_RESET << endl;
+    cout << T_GRN << "Welcome to Nomina 9.0 (new and actually working!)" << T_RESET << endl;
 
     do
     {
